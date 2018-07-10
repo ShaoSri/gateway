@@ -1,0 +1,27 @@
+server:
+  port: 11111
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: localhost
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrlPath: ${management.context-path}/health
+
+  server:
+    responseCacheUpdateInvervalMs: 3000
+    #enableSelfPreservation: false
+    #evictionIntervalTimerInMs: 10000
+
+spring:
+  application:
+      name: eureka
+
+
+
+
+
